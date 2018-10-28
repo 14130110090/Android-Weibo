@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/setting_login"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/roundedrectangle_btn"
+        android:text="登录"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/setting_manage"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedrectangle_btn"
+        android:text="帐号管理"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/setting_storage"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedrectangle_btn"
+        android:text="清除所有图片缓存"
+        android:textSize="18sp" />
+    
+    <Button
+        android:id="@+id/setting_diary"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedrectangle_btn"
+        android:text="所有diary"
+        android:textSize="18sp" />
+    
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/userhead_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.weibo.adapter.CircleImageView
+            android:id="@+id/user_home_head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/imageview_round_selector"
+            android:clickable="true"
+            android:padding="2dp" />
+
+            <TextView
+                android:id="@+id/userfragment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/userfragment_desc"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content" />
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        layout="@layout/user_info_component" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gainsboro" >
+    </View>
+
+    <ListView
+        android:id="@+id/user_home_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:dividerHeight="1dp"
+        android:drawSelectorOnTop="false"
+        android:scrollbars="vertical" >
+    </ListView>
+
+</LinearLayout>

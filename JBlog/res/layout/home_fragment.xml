@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/homefragment_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="left"
+        android:background="@drawable/home_head"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+<Button 
+            android:id="@+id/home_publish"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/add3"
+            android:layout_gravity="center_vertical"
+            />
+        <RadioButton
+            android:id="@+id/home_concern"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/hot_concern_bgselector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@drawable/hot_concern_textselector" />
+
+        <RadioButton
+            android:id="@+id/home_hot"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/hot_concern_bgselector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="热门"
+            android:textColor="@drawable/hot_concern_textselector" />
+        <Button 
+            android:id="@+id/home_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/chat_search_btn"
+            android:layout_gravity="center_vertical"
+            />
+        
+    </RadioGroup>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray" />
+
+    <com.weibo.adapter.MyViewPager
+        android:id="@+id/homefragment_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" >
+    </com.weibo.adapter.MyViewPager>
+
+</LinearLayout>

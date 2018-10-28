@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<RelativeLayout
+      
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/search_user"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/search_back"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="搜索用户名"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:background="@drawable/publish_content_edt"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/search_back"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/return_btn"
+            android:text="返回"
+            android:textColor="@color/textclickchange"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gainsboro" />
+
+    <com.weibo.view.PullToRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/search_pulltorefresh"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.weibo.view.PullableListView
+            android:id="@+id/search_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.weibo.view.PullableListView>
+
+        <include layout="@layout/load_more" />
+    </com.weibo.view.PullToRefreshLayout>
+
+</LinearLayout>

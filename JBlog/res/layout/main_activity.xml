@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.weibo.adapter.MyViewPager
+        android:id="@+id/fragment_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/view"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" >
+    </com.weibo.adapter.MyViewPager>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/radiogroup"
+        android:background="@color/gainsboro" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="left"
+        android:background="@drawable/toolbar_bg"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_home"
+            style="@style/radioButton"
+            android:drawableTop="@drawable/chat_index_btn"
+            android:text="主页"
+            android:textColor="@drawable/tabhost_text_color" />
+
+       <!--  <RadioButton
+            android:id="@+id/radio_msg"
+            style="@style/radioButton"
+            android:drawableTop="@drawable/chat_message_btn"
+            android:text="消息"
+            android:textColor="@drawable/tabhost_text_color" /> -->
+
+        <!--
+             <RadioButton
+            android:id="@+id/radio_discover"
+            style="@style/radioButton"
+            android:drawableTop="@drawable/chat_search_btn"
+            android:text="发现"
+            android:textColor="@drawable/tabhost_text_color" />
+        -->
+
+      <!--   <RadioButton
+            android:id="@+id/radio_discover"
+            style="@style/radioButton"
+            
+            android:text="发布"
+            android:textColor="@drawable/tabhost_text_color" /> -->
+
+        <RadioButton
+            android:id="@+id/radio_selfInfo"
+            style="@style/radioButton"
+            android:drawableTop="@drawable/chat_me_btn"
+            android:text="我"
+            android:textColor="@drawable/tabhost_text_color" />
+    </RadioGroup>
+
+</RelativeLayout>

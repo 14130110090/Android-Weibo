@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.weibo.adapter.CircleImageView
+            android:id="@+id/home_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/imageview_round_selector"
+            android:clickable="true"
+            android:padding="2dp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/home_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/home_time"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:layout_marginBottom="3dp"
+            >
+            <TextView 
+                android:id="@+id/home_collection"
+                android:text="已收藏"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:padding="2dp"
+                android:background="@drawable/dialog_border"
+                android:layout_marginBottom="2dp"
+                android:visibility="invisible"
+                />
+            <TextView 
+                android:id="@+id/home_concerned"
+                android:text="已关注"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:padding="2dp"
+                android:background="@drawable/dialog_border"
+                android:visibility="invisible"
+                />
+        </LinearLayout>
+        
+        <com.weibo.view.MyImageView android:id="@+id/home_more"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:src="@drawable/home_arrow_selector"
+            android:scaleType="fitXY"
+            android:paddingLeft="10dp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/home_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="18sp" />
+
+     <TextView
+        android:id="@+id/other_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:visibility="gone"
+         />
+
+    <com.weibo.view.MyGridView
+        android:id="@+id/home_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        android:horizontalSpacing="3dp"
+        android:numColumns="3"
+        android:verticalSpacing="3dp" />
+
+</LinearLayout>

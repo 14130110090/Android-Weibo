@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array">
+        <item>删除</item>
+        <item>编辑</item>
+        <item>显示</item>
+    </string-array>
+    <string-array name="concerned_array">
+        <item>取消关注</item>
+        <item>收藏</item>
+    </string-array>
+    <string-array name="hot_array">
+        <item>关注</item>
+        <item>收藏</item>
+    </string-array>
+    <string-array name="collection_array">
+        <item>取消收藏</item>
+    </string-array>
+</resources>

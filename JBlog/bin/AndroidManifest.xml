@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.weibo.jblog"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.weibo.guide.GuideActivity"
+            android:label="@string/app_name"
+            android:theme="@style/guidestyle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.weibo.jblog.MainFragmentActivity" />
+        <activity android:name="com.weibo.jblog.RegisterActivity" />
+        <activity android:name="com.weibo.jblog.LoginActivity" />
+        <activity android:name="com.weibo.jblog.PublishActivity" />
+        <activity android:name="com.weibo.jblog.ShootActivity" />
+        <activity android:name="com.weibo.jblog.UploadActivity" />
+        <activity android:name="com.weibo.jblog.DiaryListActivity" />
+        <activity android:name="com.weibo.jblog.AlbumListActivity" />
+        <activity android:name="com.weibo.jblog.VisitorActivity" />
+        <activity android:name="com.weibo.jblog.UserActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            ></activity>
+        <activity android:name="com.weibo.jblog.DiaryActivity" 
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name="com.weibo.jblog.AlbumActivity" />
+        <activity android:name="com.weibo.jblog.PhotoShowActivity"/>
+        <activity android:name="com.weibo.jblog.SettingActivity" />
+        <activity android:name="com.weibo.jblog.AccountActivity" />
+        <activity android:name="com.weibo.jblog.ConcernActivity"/>
+        <activity android:name="com.weibo.jblog.CollectionActivity"/>
+        <activity android:name="com.weibo.jblog.FansActivity"/>
+        <activity android:name="com.weibo.jblog.UserInfoActivity"/>
+        <activity android:name="com.weibo.jblog.SearchActivity"/>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+</manifest>

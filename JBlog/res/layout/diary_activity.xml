@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000" >
+
+    <RelativeLayout
+        android:id="@+id/diary_relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="正文"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/diary_back"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/return_btn"
+            android:text="返回"
+            android:textColor="@color/textclickchange"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/diary_view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/diary_relativelayout"
+        android:background="@color/gainsboro" />
+
+    <ListView
+        android:id="@+id/comment_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/diary_bottom_view"
+        android:layout_below="@id/diary_view" >
+    </ListView>
+
+    <View
+        android:id="@+id/diary_bottom_view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/diary_comment"
+        android:background="@color/gray" />
+
+    <include
+        android:id="@+id/diary_comment"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/diary_comment_component" />
+
+</RelativeLayout>

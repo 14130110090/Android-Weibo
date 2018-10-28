@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" xmlns:app="http://schemas.android.com/apk/res/com.weibo.jblog">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_height="50dp"
+        android:layout_width="fill_parent"
+        android:id="@+id/toolbar"
+        android:background="@color/yin"
+        app:theme="@style/MyToolbar"
+        >
+      <TextView android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="我的订单"
+          android:layout_gravity="center"
+          android:textSize="18sp"
+          />
+    
+    </android.support.v7.widget.Toolbar>
+    
+    <ImageView
+        android:id="@+id/user_head"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="user_head" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    
+    
+    
+</LinearLayout>
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent" >
+         <TextView android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="用户主页"
+          android:layout_gravity="center"
+          android:textSize="18sp"
+          />
+    </android.support.v7.widget.Toolbar>
+    
+    
+    <LinearLayout
+        android:id="@+id/user_activity_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.weibo.adapter.CircleImageView
+            android:id="@+id/user_activity_head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/imageview_round_selector"
+            android:clickable="true"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/user_activity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/user_activity_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+    
+    
+
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        layout="@layout/user_info_component" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gainsboro" >
+    </View>
+
+    <ListView
+        android:id="@+id/user_activity_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:dividerHeight="1dp"
+        android:drawSelectorOnTop="false"
+        android:scrollbars="vertical" >
+    </ListView>
+
+</LinearLayout>
